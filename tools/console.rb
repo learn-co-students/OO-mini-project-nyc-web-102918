@@ -19,6 +19,7 @@ recipe4=Recipe.new("Beef")
  card2=RecipeCard.new(recipe2,user1,Date.new(2001,5,29),5)
  card3=RecipeCard.new(recipe3,user1,Date.new(2009,5,29),10)
  card4=RecipeCard.new(recipe4,user1,Date.new(20019,5,29),20)
+ card5=RecipeCard.new(recipe1,user2,Date.new(2009,5,29),15)
 
 
 
@@ -51,4 +52,6 @@ user2.declare_allergen(ingredient3)
 puts "\n Test8 Ingredient.most_common_allergen returns cheese"
   puts  Ingredient.most_common_allergen.inspect
 
+  puts "\n Test9 Recipe.most_popular returns Chili"
+  puts  Recipe.most_popular.inspect
 # card2=u2.add_recipe_card(recipe,1,10)
