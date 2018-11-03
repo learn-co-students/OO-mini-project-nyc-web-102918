@@ -1,8 +1,11 @@
 class Recipe
+  attr_accessor :name
 @@all=[]
 
-def initialize
+def initialize (name)
+  @name = name
   @@all << self
+
 end
 
  def self.all
@@ -50,6 +53,3 @@ end
 
 
 end ### END OF CLASS
-
-r1 = Recipe.new
-puts r1.allergens

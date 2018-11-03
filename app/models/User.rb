@@ -1,8 +1,11 @@
 class User
+attr_accessor :name
+  @@all=[]
+    def initialize(name)
+   @@all << self
+   @name = name
 
-@@all=[]
-  def initialize
- @@all <self
+end
 
  def self.all
    @@all
@@ -19,8 +22,8 @@ class User
     end
 ##
   def add_recipe_card(recipe,date,rating)
- RecipeCard.new(recipe,self,date,rating)
-
+ card1=RecipeCard.new(recipe,self,date,rating)
+card1
   end
 
   def declare_allergen(ingredient)
@@ -31,18 +34,19 @@ class User
     Allergens.all.select{|allergen|allergen.user==self}
   end
 
-  def allergens # gets ingredients
+  def allergens # gets ingredients user is allergic to
  user_allergens.map{|allergen|allergen.ingredient}
 end
 
  def top_three_recipes
-   recipes.sort_by{|recipie_card|recipe_card.rating}[0..2]
+   sorted_cards=recipecards.sort_by{|recipe_card|recipe_card.rating}.reverse[0..2]
+   sorted_cards.map{|recipe_card|recipe_card.recipe}
 
  end
 
  def most_recent_recipe
-   recipes.sort_by{|recipie_card|recipe_card.date}[-1]
-
+   recent_recipe=recipecards.sort_by{|recipe_card|recipe_card.date}[0]
+recent_recipe.recipe
  end
 
 

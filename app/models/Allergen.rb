@@ -1,5 +1,5 @@
 class Allergen
-attr_accessor :@user :ingredient
+attr_accessor :user, :ingredient
 
   @@all=[]
 

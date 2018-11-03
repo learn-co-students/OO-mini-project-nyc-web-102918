@@ -11,11 +11,11 @@ We've provided you with a console that you can use to test your code. To enter a
 ### `Recipe`
 Build the following methods on the Recipe class
 
--** `Recipe.all`
+-`Recipe.all`
 should return all of the recipe instances
-- **`Recipe.most_popular`
+- `Recipe.most_popular`
 should return the recipe instance with the highest number of users (the recipe that has the most recipe cards)
--** `Recipe#users`
+- `Recipe#users`
 should return the user instances who have recipe cards with this recipe
 - `Recipe#ingredients`
 should return all of the ingredients in this recipe
@@ -39,6 +39,7 @@ should accept an ingredient instance as an argument, and create a new allergen i
 - `User#allergens`
 should return all of the ingredients this user is allergic to
 - `User#top_three_recipes`
+- PASSED TESTS
 should return the top three highest rated recipes for this user.
 - `User#most_recent_recipe`
 should return the recipe most recently added to the user's cookbook.
@@ -68,9 +69,6 @@ should return all of the ingredient instances
 - `Ingredient.most_common_allergen`
 should return the ingredient instance that the highest number of users are allergic to
 
-#get list of of ingredient
-# each ingredient select allergens
-#count the number of occurences
 
 
 ### `RecipeIngredient`

@@ -1,7 +1,9 @@
 class Ingredient
+  attr_accessor :name
 @@all=[]
-   def initialize
+   def initialize(name)
      @@all << self
+     @name=name
    end
 
 def self.all
@@ -17,7 +19,7 @@ end
 # end
 
 def count_users
-Allergens.all.select{|allergen|allergen.ingredient==self}.length
+Allergen.all.select{|allergen|allergen.ingredient==self}.length
 end
 
 def self.most_common_allergen
@@ -28,11 +30,14 @@ def self.most_common_allergen
     if ingredient.count_users>most_users
       most_users=ingredient.count_users
       most_users_ingredient=ingredient
+    end
+
   }
-most_users_ingredient
-}
+
+  most_users_ingredient
 
 end
+
 
 
 
